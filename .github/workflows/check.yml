@@ -1,0 +1,25 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: lts/*
+      - name: Validate scripts and generated files
+        run: node tools/userscripts.mjs check
+      - name: Require a version bump on changed scripts
+        if: github.event_name == 'pull_request'
+        run: node tools/userscripts.mjs check --base ${{ github.event.pull_request.base.sha }}

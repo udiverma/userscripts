@@ -1,0 +1,17 @@
+{
+  "accessibility": "Readability, contrast, keyboard navigation, screen-reader fixes",
+  "ai": "Adds or improves AI / LLM features on a site",
+  "automation": "Fills, clicks, or repeats steps for you",
+  "bulk-actions": "Select, edit, or act on many items at once",
+  "cleanup": "Hides clutter, banners, upsells, or distractions",
+  "data-export": "Copies or downloads page data (CSV, JSON, clipboard)",
+  "developer": "Tools for developers: GitHub, docs, consoles, APIs",
+  "enterprise": "Business and SaaS apps used at work",
+  "finance": "Banking, accounting, budgeting, investing",
+  "media": "Video, audio, and image sites",
+  "privacy": "Blocks tracking or limits what a site can see",
+  "productivity": "Saves time or clicks on a site you use often",
+  "shopping": "Retail, prices, listings, checkout",
+  "social": "Social networks, forums, chat",
+  "ui-tweak": "Adds buttons, badges, panels, or layout changes"
+}

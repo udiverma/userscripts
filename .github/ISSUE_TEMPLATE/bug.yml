@@ -1,0 +1,27 @@
+name: Bug report
+description: A script is broken or misbehaving
+labels: [bug]
+body:
+  - type: input
+    id: script
+    attributes:
+      label: Script
+      description: File name without `.user.js`, e.g. `my-script`
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      description: Where it broke (remove anything private)
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened vs. what you expected
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Browser + extension
+      placeholder: Chrome 141, Tampermonkey 5.4

@@ -1,0 +1,8 @@
+#!/bin/sh
+# Bump @version on edited scripts, normalize + validate, regenerate README/indexes.
+set -e
+staged=$(git diff --cached --name-only --diff-filter=ACM -- scripts | grep '\.user\.js$' || true)
+node tools/userscripts.mjs bump
+node tools/userscripts.mjs build
+[ -n "$staged" ] && git add $staged
+git add README.md scripts.json llms.txt

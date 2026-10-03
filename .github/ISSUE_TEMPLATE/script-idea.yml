@@ -1,0 +1,17 @@
+name: Script idea
+description: Suggest a new script
+labels: [idea]
+body:
+  - type: input
+    id: site
+    attributes:
+      label: Site
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What should it do?
+    validations:
+      required: true

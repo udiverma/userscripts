@@ -1,0 +1,14 @@
+{
+  "name": "userscripts",
+  "private": true,
+  "description": "Auto-updating Tampermonkey userscripts",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "new": "node tools/userscripts.mjs new",
+    "build": "node tools/userscripts.mjs build",
+    "check": "node tools/userscripts.mjs check",
+    "dev": "node tools/userscripts.mjs dev",
+    "setup": "git config core.hooksPath .githooks && echo 'git hooks enabled'"
+  }
+}
